@@ -82,8 +82,8 @@
               />
             </div>
           </div>
-          <div class="controls">
-            ><button type="button" class="next-btn">Next Step</button>
+          <div class="controls ctrl-form1">
+            <button type="button" class="next-btn">Next Step</button>
           </div>
         </div>
 
@@ -95,44 +95,75 @@
           <p class="stage-description">
             You have the option of monthly or yearly billing.
           </p>
-          <div class="sub-plans">
-            <div class="monthly-sub">
-              <div
-                class="payments-plans-frame billing-zone"
-                data-item-type="large"
-              >
-                <div class="payments active-payment">
-                  <img src="./assets/images/icon-arcade.svg" alt="" />
-                  <div>
-                    <h2 class="theme">Arcade</h2>
-                    <p class="plan-amt">$9/mo</p>
+          <div class="sub-plans-frame">
+            <div class="sub-plans active-subplans" id="fig1">
+              <div class="monthly-sub">
+                <div
+                  class="payments-plans-frame billing-zone"
+                  data-item-type="large"
+                >
+                  <div class="payments active-payment">
+                    <img src="./assets/images/icon-arcade.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Arcade</h2>
+                      <p class="plan-amt">$90/yr</p>
+                    </div>
+                  </div>
+                  <div class="payments">
+                    <img src="./assets/images/icon-advanced.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Advanced</h2>
+                      <p class="plan-amt">$120/yr</p>
+                    </div>
+                  </div>
+                  <div class="payments">
+                    <img src="./assets/images/icon-pro.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Pro</h2>
+                      <p class="plan-amt">$150/yr</p>
+                    </div>
                   </div>
                 </div>
-                <div class="payments">
-                  <img src="./assets/images/icon-advanced.svg" alt="" />
-                  <div>
-                    <h2 class="theme">Advanced</h2>
-                    <p class="plan-amt">$12/mo</p>
-                  </div>
-                </div>
-                <div class="payments">
-                  <img src="./assets/images/icon-pro.svg" alt="" />
-                  <div>
-                    <h2 class="theme">Pro</h2>
-                    <p class="plan-amt">$15/mo</p>
-                  </div>
-                </div>
-              </div>
-              <div class="plan-toggle billing-zone" data-item-type="large">
-                <p class="sub-package active-package">Monthly</p>
-                <div id="toggle-btn" onclick="toggleIcon()">
-                  <span></span>
-                </div>
-                <p class="sub-package">Yearly</p>
               </div>
             </div>
+            <!-- <div class="sub-plans" id="fig2">
+              <div class="monthly-sub">
+                <div
+                  class="payments-plans-frame billing-zone"
+                  data-item-type="large"
+                >
+                  <div class="payments active-payment">
+                    <img src="./assets/images/icon-arcade.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Arcade</h2>
+                      <p class="plan-amt">$9/mo</p>
+                    </div>
+                  </div>
+                  <div class="payments">
+                    <img src="./assets/images/icon-advanced.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Advanced</h2>
+                      <p class="plan-amt">$12/mo</p>
+                    </div>
+                  </div>
+                  <div class="payments">
+                    <img src="./assets/images/icon-pro.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Pro</h2>
+                      <p class="plan-amt">$15/mo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
           </div>
-
+          <div class="plan-toggle billing-zone" data-item-type="large">
+            <p class="sub-package active-package">Monthly</p>
+            <div id="toggle-btn" onclick="activePackage()">
+              <span></span>
+            </div>
+            <p class="sub-package">Yearly</p>
+          </div>
           <div class="controls">
             <a href="#">Go Back</a
             ><button type="button" class="next-btn">Next Step</button>
@@ -147,10 +178,10 @@
           <p class="stage-description">
             Add-ons help enhance your gaming experience.
           </p>
-          <div class="sub-plans">
+          <div class="add-ons-plans">
             <div class="our-services">
               <div class="gaming-experience">
-                <div class="games" data-spcing="spaced">
+                <div class="games active-game-info" data-spcing="spaced">
                   <label for="checkbox">
                     <input
                       type="checkbox"
@@ -160,37 +191,37 @@
                     />
                   </label>
                   <div class="game-info">
-                    <p>Online service</p>
+                    <p class="game-title">Online service</p>
                     <span>Access to multiplayer games</span>
                   </div>
-                  <p>+$1/mo</p>
+                  <p class="game-price">+$1/mo</p>
                 </div>
                 <div class="games" data-spcing="spaced">
                   <label for="checkbox">
                     <input type="checkbox" id="checkbox" value="service1" />
                   </label>
                   <div class="game-info">
-                    <p>Larger storage</p>
+                    <p class="game-title">Larger storage</p>
                     <span>Extra 1TB of cloud save</span>
                   </div>
-                  <p>+$2/mo</p>
+                  <p class="game-price">+$2/mo</p>
                 </div>
                 <div class="games" data-spcing="spaced">
                   <label for="checkbox">
                     <input type="checkbox" id="checkbox" value="service1" />
                   </label>
                   <div class="game-info">
-                    <p>Customizable Profile</p>
+                    <p class="game-title">Customizable Profile</p>
                     <span>Custom theme on your profile</span>
                   </div>
-                  <p>+$2/mo</p>
+                  <p class="game-price">+$2/mo</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="controls">
-            <a href="#">Go Back</a><button type="button">Next Step</button>
+            <div class="controls">
+              <a href="#">Go Back</a
+              ><button type="button" class="next-btn">Next Step</button>
+            </div>
           </div>
         </div>
 
