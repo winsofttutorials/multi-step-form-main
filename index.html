@@ -83,7 +83,9 @@
             </div>
           </div>
           <div class="controls ctrl-form1">
-            <button type="button" class="next-btn">Next Step</button>
+            <button type="button" class="next-btn" id="next1" onclick="next1()">
+              Next Step
+            </button>
           </div>
         </div>
 
@@ -96,7 +98,37 @@
             You have the option of monthly or yearly billing.
           </p>
           <div class="sub-plans-frame">
-            <div class="sub-plans active-subplans" id="fig1">
+            <div class="sub-plans active-subplans">
+              <div class="monthly-sub">
+                <div
+                  class="payments-plans-frame billing-zone"
+                  data-item-type="large"
+                >
+                  <div class="payments active-payment">
+                    <img src="./assets/images/icon-arcade.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Arcade</h2>
+                      <p class="plan-amt">$9/mo</p>
+                    </div>
+                  </div>
+                  <div class="payments">
+                    <img src="./assets/images/icon-advanced.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Advanced</h2>
+                      <p class="plan-amt">$12/mo</p>
+                    </div>
+                  </div>
+                  <div class="payments">
+                    <img src="./assets/images/icon-pro.svg" alt="" />
+                    <div>
+                      <h2 class="theme">Pro</h2>
+                      <p class="plan-amt">$15/mo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sub-plans">
               <div class="monthly-sub">
                 <div
                   class="payments-plans-frame billing-zone"
@@ -126,47 +158,24 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="sub-plans" id="fig2">
-              <div class="monthly-sub">
-                <div
-                  class="payments-plans-frame billing-zone"
-                  data-item-type="large"
-                >
-                  <div class="payments active-payment">
-                    <img src="./assets/images/icon-arcade.svg" alt="" />
-                    <div>
-                      <h2 class="theme">Arcade</h2>
-                      <p class="plan-amt">$9/mo</p>
-                    </div>
-                  </div>
-                  <div class="payments">
-                    <img src="./assets/images/icon-advanced.svg" alt="" />
-                    <div>
-                      <h2 class="theme">Advanced</h2>
-                      <p class="plan-amt">$12/mo</p>
-                    </div>
-                  </div>
-                  <div class="payments">
-                    <img src="./assets/images/icon-pro.svg" alt="" />
-                    <div>
-                      <h2 class="theme">Pro</h2>
-                      <p class="plan-amt">$15/mo</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
           <div class="plan-toggle billing-zone" data-item-type="large">
             <p class="sub-package active-package">Monthly</p>
-            <div id="toggle-btn" onclick="activePackage()">
+            <div id="toggle-btn" onclick="toggleMode()">
               <span></span>
             </div>
             <p class="sub-package">Yearly</p>
           </div>
           <div class="controls">
-            <a href="#">Go Back</a
-            ><button type="button" class="next-btn">Next Step</button>
+            <a href="#" id="back1" onclick="back1()">Go Back</a
+            ><button
+              type="button"
+              class="next-btn"
+              id="next2"
+              onclick="next2()"
+            >
+              Next Step
+            </button>
           </div>
         </div>
 
@@ -181,46 +190,94 @@
           <div class="add-ons-plans">
             <div class="our-services">
               <div class="gaming-experience">
-                <div class="games active-game-info" data-spcing="spaced">
-                  <label for="checkbox">
-                    <input
-                      type="checkbox"
-                      id="checkbox"
-                      value="service1"
-                      checked
-                    />
-                  </label>
-                  <div class="game-info">
-                    <p class="game-title">Online service</p>
-                    <span>Access to multiplayer games</span>
+                <div class="gamesFrame active-game-frame">
+                  <div class="games active-game-info" data-spcing="spaced">
+                    <label for="checkbox">
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        value="service1"
+                        checked
+                      />
+                    </label>
+                    <div class="game-info">
+                      <p class="game-title">Online service</p>
+                      <span>Access to multiplayer games</span>
+                    </div>
+                    <p class="game-price">+$1/mo</p>
                   </div>
-                  <p class="game-price">+$1/mo</p>
+                  <div class="games" data-spcing="spaced">
+                    <label for="checkbox">
+                      <input type="checkbox" id="checkbox" value="service1" />
+                    </label>
+                    <div class="game-info">
+                      <p class="game-title">Larger storage</p>
+                      <span>Extra 1TB of cloud save</span>
+                    </div>
+                    <p class="game-price">+$2/mo</p>
+                  </div>
+                  <div class="games" data-spcing="spaced">
+                    <label for="checkbox">
+                      <input type="checkbox" id="checkbox" value="service1" />
+                    </label>
+                    <div class="game-info">
+                      <p class="game-title">Customizable Profile</p>
+                      <span>Custom theme on your profile</span>
+                    </div>
+                    <p class="game-price">+$2/mo</p>
+                  </div>
                 </div>
-                <div class="games" data-spcing="spaced">
-                  <label for="checkbox">
-                    <input type="checkbox" id="checkbox" value="service1" />
-                  </label>
-                  <div class="game-info">
-                    <p class="game-title">Larger storage</p>
-                    <span>Extra 1TB of cloud save</span>
+              </div>
+              <div class="gaming-experience">
+                <div class="gamesFrame">
+                  <div class="games active-game-info" data-spcing="spaced">
+                    <label for="checkbox">
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        value="service1"
+                        checked
+                      />
+                    </label>
+                    <div class="game-info">
+                      <p class="game-title">Online service</p>
+                      <span>Access to multiplayer games</span>
+                    </div>
+                    <p class="game-price">+$1/yr</p>
                   </div>
-                  <p class="game-price">+$2/mo</p>
-                </div>
-                <div class="games" data-spcing="spaced">
-                  <label for="checkbox">
-                    <input type="checkbox" id="checkbox" value="service1" />
-                  </label>
-                  <div class="game-info">
-                    <p class="game-title">Customizable Profile</p>
-                    <span>Custom theme on your profile</span>
+                  <div class="games" data-spcing="spaced">
+                    <label for="checkbox">
+                      <input type="checkbox" id="checkbox" value="service1" />
+                    </label>
+                    <div class="game-info">
+                      <p class="game-title">Larger storage</p>
+                      <span>Extra 1TB of cloud save</span>
+                    </div>
+                    <p class="game-price">+$2/yr</p>
                   </div>
-                  <p class="game-price">+$2/mo</p>
+                  <div class="games" data-spcing="spaced">
+                    <label for="checkbox">
+                      <input type="checkbox" id="checkbox" value="service1" />
+                    </label>
+                    <div class="game-info">
+                      <p class="game-title">Customizable Profile</p>
+                      <span>Custom theme on your profile</span>
+                    </div>
+                    <p class="game-price">+$2/yr</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="controls">
-              <a href="#">Go Back</a
-              ><button type="button" class="next-btn">Next Step</button>
+              <a href="#" id="back2" onclick="back2()">Go Back</a
+              ><button
+                type="button"
+                class="next-btn"
+                id="next3"
+                onclick="next3()"
+              >
+                Next Step
+              </button>
             </div>
           </div>
         </div>
@@ -245,7 +302,8 @@
             <b></b>
           </div>
           <div class="controls">
-            <a href="#">Go Back</a><button type="button">Confirm</button>
+            <a href="#" id="back3" onclick="back3()">Go Back</a
+            ><button type="submit" id="next4" onclick="next4()">Confirm</button>
           </div>
         </div>
       </div>
@@ -256,10 +314,10 @@
       <!-- Step 4 end -->
 
       <!-- Step 5 start -->
-      <div class="summary">
+      <div class="step-details summary" id="form5">
         <img src="./assets/images/icon-thank-you.svg" alt="" />
-        <h2>Thank you!</h2>
-        <p>
+        <h2 class="courtesy-msg">Thank you!</h2>
+        <p class="thank-msg">
           Thanks for confirming your subscription! We hope you have fun using
           our platform. If you ever need support, please feel free to email us
           at support@loremgaming.com.
