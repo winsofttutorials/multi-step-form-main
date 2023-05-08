@@ -148,3 +148,13 @@ next4.onclick = function () {
   activeStage();
 };
 next4.addEventListener("click", next1);
+
+// --------------------Games Selection-----------------
+let game = document.getElementsByClassName("games");
+// let gamez = 1;
+function selectedGame() {
+  for (const game of games) {
+    game.classList.remove("active-game-info");
+  }
+  event.currentTarget.classList.add("active-game-info");
+}

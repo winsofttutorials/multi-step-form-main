@@ -48,7 +48,7 @@
 
       <!-- Sidebar end -->
       <div class="details-frame">
-        <div class="step-details active" id="form1">
+        <div class="step-details active step-det2 step-det3" id="form1">
           <h1 class="section-title">Personal info</h1>
           <p class="stage-description">
             Please provide your name, email address, and phone number.
@@ -76,7 +76,7 @@
               <p class="status-tag">Phone Number</p>
               <input
                 type="text"
-                placeholder="e.g. +1 234 567 890 Next Step"
+                placeholder="e.g. +1 234 567 890"
                 required
                 class="userfield"
               />
@@ -92,7 +92,7 @@
         <!-- Step 1 end -->
 
         <!-- Step 2 start -->
-        <div class="step-details" id="form2">
+        <div class="step-details step-det2" id="form2">
           <h1 class="section-title">Select your plan</h1>
           <p class="stage-description">
             You have the option of monthly or yearly billing.
@@ -182,7 +182,7 @@
         <!-- Step 2 end -->
 
         <!-- Step 3 start -->
-        <div class="step-details" id="form3">
+        <div class="step-details step-det2" id="form3">
           <h1 class="section-title">Pick add-ons</h1>
           <p class="stage-description">
             Add-ons help enhance your gaming experience.
@@ -198,6 +198,7 @@
                         id="checkbox"
                         value="service1"
                         checked
+                        onclick="selectedGame()"
                       />
                     </label>
                     <div class="game-info">
@@ -208,7 +209,12 @@
                   </div>
                   <div class="games" data-spcing="spaced">
                     <label for="checkbox">
-                      <input type="checkbox" id="checkbox" value="service1" />
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        value="service1"
+                        onclick="selectedGame()"
+                      />
                     </label>
                     <div class="game-info">
                       <p class="game-title">Larger storage</p>
@@ -218,7 +224,12 @@
                   </div>
                   <div class="games" data-spcing="spaced">
                     <label for="checkbox">
-                      <input type="checkbox" id="checkbox" value="service1" />
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        value="service1"
+                        onclick="selectedGame()"
+                      />
                     </label>
                     <div class="game-info">
                       <p class="game-title">Customizable Profile</p>
@@ -237,6 +248,7 @@
                         id="checkbox"
                         value="service1"
                         checked
+                        onclick="selectedGame()"
                       />
                     </label>
                     <div class="game-info">
@@ -247,7 +259,12 @@
                   </div>
                   <div class="games" data-spcing="spaced">
                     <label for="checkbox">
-                      <input type="checkbox" id="checkbox" value="service1" />
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        value="service1"
+                        onclick="selectedGame()"
+                      />
                     </label>
                     <div class="game-info">
                       <p class="game-title">Larger storage</p>
@@ -257,7 +274,12 @@
                   </div>
                   <div class="games" data-spcing="spaced">
                     <label for="checkbox">
-                      <input type="checkbox" id="checkbox" value="service1" />
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        value="service1"
+                        onclick="selectedGame()"
+                      />
                     </label>
                     <div class="game-info">
                       <p class="game-title">Customizable Profile</p>
@@ -268,7 +290,7 @@
                 </div>
               </div>
             </div>
-            <div class="controls">
+            <div class="controls controls3">
               <a href="#" id="back2" onclick="back2()">Go Back</a
               ><button
                 type="button"
@@ -285,7 +307,7 @@
         <!-- Step 3 end -->
 
         <!-- Step 4 start -->
-        <div class="step-details" id="form4">
+        <div class="step-details step-det2" id="form4">
           <h1 class="section-title">Finishing up</h1>
           <p class="stage-description">
             Double-check everything looks OK before confirming.
@@ -303,7 +325,14 @@
           </div>
           <div class="controls">
             <a href="#" id="back3" onclick="back3()">Go Back</a
-            ><button type="submit" id="next4" onclick="next4()">Confirm</button>
+            ><button
+              type="submit"
+              class="next-btn"
+              id="next4"
+              onclick="next4()"
+            >
+              Confirm
+            </button>
           </div>
         </div>
       </div>

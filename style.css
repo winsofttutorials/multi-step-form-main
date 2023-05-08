@@ -33,14 +33,18 @@
 }
 
 body {
-  min-height: 100vh;
   font-family: var(--font-family-default);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   /* background: var(--Marine-blue); */
 }
+
+@media (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -54,16 +58,21 @@ a {
 }
 
 .multi-step-frame {
-  width: 800px;
-  height: 550px;
-  display: flex;
+  max-width: 800px;
+  display: grid;
+  overflow: hidden;
+}
+
+.multi-step-frame {
+  display: grid;
+  grid-template-columns: 250px 500px;
   padding: 10px;
   background: var(--White);
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
   margin-bottom: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 550px;
 }
 
 .sidebar {
@@ -121,13 +130,14 @@ a {
 .details-frame {
   flex-basis: 70%;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .step-details {
-  /* display: none; */
   width: 100%;
   padding: 40px 70px;
   position: absolute;
+  z-index: 11;
 }
 
 .active {
@@ -206,7 +216,7 @@ a {
 
 .payments img {
   width: 25px;
-  /* margin-bottom: 50px;f */
+  /* margin-bottom: 50px;*/
 }
 
 .active-payment,
@@ -390,4 +400,65 @@ a {
   max-width: 350px;
   font-size: 12px;
   color: var(--Cool-gray);
+}
+
+/* --------------------@media Queries--------------------- */
+@media screen and (max-width: 600px) {
+  .multi-step-frame {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: var(--White);
+  }
+
+  .sidebar {
+    background: url("./assets/images/bg-sidebar-mobile.svg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .sidebar .stages {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .steps {
+    display: none;
+  }
+
+  .details-frame {
+    background-color: var(--Magnolia);
+    display: flex;
+    justify-content: center;
+    max-height: 330px;
+  }
+
+  .step-details {
+    background: var(--White);
+    width: 400px;
+    margin-top: -90px;
+    padding: 20px 20px;
+    border-radius: 10px;
+  }
+
+  .controls {
+    position: absolute;
+    top: 335px;
+  }
+
+  .step-det2 {
+    margin-left: 80px;
+  }
+  .step-det3 {
+    margin-right: 50px;
+  }
+  .ctrl-form1 {
+    margin-top: 110px;
+  }
+
+  .controls3 {
+    margin-top: 150px;
+  }
 }
