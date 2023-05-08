@@ -50,8 +50,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](IFIDIKUROEPHOD)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/winsofttutorials/multi-step-form-main.git)
+- Live Site URL: [Add live site URL here](https://winsofttutorials.github.io/multi-step-form-main/)
 
 ## My process
 
